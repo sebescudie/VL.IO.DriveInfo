@@ -4,6 +4,8 @@
 
 A node set to get information about drives
 
-<p align="center">
 <img src="docs/capture.png" title="" alt="Help patch capture" width="600">
-</p>
+
+## Credis
+
+Thanks for [Refik Anadol Studio](https://refikanadolstudio.com/) for sponsoring the development of this plugin!
