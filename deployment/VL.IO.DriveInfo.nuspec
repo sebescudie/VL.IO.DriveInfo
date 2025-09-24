@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.DriveInfo</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>VL.IO.DriveInfo</title>
     <!-- Provide authors, projectUrl (website) and repository url--> 
     <authors>sebescudie</authors>
