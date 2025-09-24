@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.IO.DriveInfo</id>
+    <version>1.0.0</version>
+    <title>VL.IO.DriveInfo</title>
+    <!-- Provide authors, projectUrl (website) and repository url--> 
+    <authors>sebescudie</authors>
+    <projectUrl>https://github.com/sebescudie/VL.IO.DriveInfo</projectUrl>
+    <repository type="git" url="https://github.com/sebescudie/VL.IO.DriveInfo" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Provide description and tags-->
+    <description>A vvvv nodeset to get information about disk drives</description>
+    <tags>VL drive disk</tags>
+    <license type="expression">LGPL-3.0-only</license>
+    <readme>docs\README.md</readme>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" />
+    <file src="..\README.md" target="docs\" />
+  </files>
+</package>

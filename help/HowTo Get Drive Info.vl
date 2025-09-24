@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="JT61eh6DheQMc9mdp4nFHN" LanguageVersion="2025.7.1-0013-g8fcece0df9" Version="0.128">
+  <NugetDependency Id="QSxJvCtXY0xMWz5PCaraYT" Location="VL.CoreLib" Version="2025.7.1-0013-g8fcece0df9" />
+  <Patch Id="Cu9pX0bW1f3QczaAW5WtcX">
+    <Canvas Id="FmxFP12GVVVNzMDyztXv8L" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="A9Ma1U9oUCxQUxu8GpCVeS">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="NwoOtlioTaqMC8n5lZ6IC9">
+        <Canvas Id="V2YhGCiVAIdL4uIPB7ZClS" CanvasType="Group">
+          <Node Bounds="191,339,57,19" Id="ATCx3fMTcBZNGVtSkIIZI3">
+            <p:NodeReference LastCategoryFullName="IO.DriveInfo" LastDependency="VL.IO.DriveInfo.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="IO" />
+              <CategoryReference Kind="Category" Name="DriveInfo" />
+              <Choice Kind="ProcessAppFlag" Name="AllDrives" />
+            </p:NodeReference>
+            <Pin Id="LMNZehmFasfP4eRgeMv8a0" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JLDmSU6tH5jMbttHFHiY2n" Name="Drive Type" Kind="InputPin" />
+            <Pin Id="TnwEvRJsZppMkKMDhG41l3" Name="Ready Drives Only" Kind="InputPin" />
+            <Pin Id="LT3pWsRRe9CNXZwOjnuC29" Name="Output" Kind="OutputPin" />
+            <Pin Id="DkNjdP7nUK1NqwlrH1PAYh" Name="Refresh" Kind="InputPin" />
+          </Node>
+          <Pad Id="EjeeHXcinVHPZN10y8sRhK" Comment="Refresh" Bounds="245,308,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="599,369,145,19" Id="IKnrBqJPfZeO5WkUgOO6UC">
+            <p:NodeReference LastCategoryFullName="IO.DriveInfo.Utils" LastDependency="VL.IO.DriveInfo.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Information" />
+            </p:NodeReference>
+            <Pin Id="BMjpJYsCB9MOsBDf1Ydhe7" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CAyz3AFIS8hP22mt3GWt5I" Name="Input" Kind="InputPin" />
+            <Pin Id="CKnx551hHRkNSHAFvHpa68" Name="Unit" Kind="InputPin" />
+            <Pin Id="M94NMZTrChNOBa8Ui43Vt2" Name="Name" Kind="OutputPin" />
+            <Pin Id="BLN6KRxWaAgMxsmfkyKNB3" Name="Volume Label" Kind="OutputPin" />
+            <Pin Id="OBfPwFoTqT9MgmkJebIzzE" Name="Drive Type" Kind="OutputPin" />
+            <Pin Id="MPGfm6oVG8XOh1YRBsPrGc" Name="Drive Format" Kind="OutputPin" />
+            <Pin Id="NDZgRJJ9I3NNzWH3f6KXKg" Name="Total Size" Kind="OutputPin" />
+            <Pin Id="KdAdThAyVOAMihWV8JiFUd" Name="Total Free Space" Kind="OutputPin" />
+            <Pin Id="JfFsLbiLOgnQPXRPWxswYV" Name="Percent Free" Kind="OutputPin" />
+            <Pin Id="SqN5gxIaOc4P3hPuiQscga" Name="Percent Used" Kind="OutputPin" />
+          </Node>
+          <Pad Id="UHSVBdZst20ML1ztKFwrEa" Comment="Unit" Bounds="741,350,78,15" ShowValueBox="true" isIOBox="true" Value="Gigabytes">
+            <p:TypeAnnotation LastCategoryFullName="IO.DriveInfo" LastDependency="VL.IO.DriveInfo.vl">
+              <Choice Kind="TypeFlag" Name="ByteUnit" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SwYe3rHUTTvPOvhcirQXiM" Comment="Total Free Space" Bounds="701,431,53,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="NJJuyIA5XZsO5l4Z3Dd7gK" Comment="Percent Free" Bounds="721,451,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="OhREB9ph6E7LseO6FiOX3I" Comment="" Bounds="193,389,169,63" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JW5CZDIlh8AL7SWF7wSbB4" Comment="Drive Type" Bounds="193,259,105,15" ShowValueBox="true" isIOBox="true" Value="Fixed">
+            <p:TypeAnnotation LastCategoryFullName="IO.DriveInfo" LastDependency="VL.IO.DriveInfo.vl">
+              <Choice Kind="TypeFlag" Name="DriveType" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Overlay Id="HeumRa5p8QpLrz9vV8nSIU" Name="Enumerate all Drives" Bounds="154,183,315,313" />
+          <Pad Id="DLG1ejM7bBZLf0B5rP7Urq" Comment="Name" Bounds="601,431,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="599,276,92,19" Id="QTucKmHlz7rODq4b5ApxvO">
+            <p:NodeReference LastCategoryFullName="IO.DriveInfo.Utils" LastDependency="VL.IO.DriveInfo.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetDriveByLetter" />
+            </p:NodeReference>
+            <Pin Id="FBJsRhwXNwJNJCh0wggJ8v" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IRjuOGPfJaYNY1laOvjWEW" Name="Letter" Kind="InputPin" />
+            <Pin Id="DkH2hJIweXYPoZObaX6lxT" Name="Output" Kind="OutputPin" />
+            <Pin Id="UeF66fAfZNbN6eYzPXGUbZ" Name="Found" Kind="OutputPin" />
+          </Node>
+          <Pad Id="GxwCSc22HSnPNScnhqeoCE" Comment="Letter" Bounds="601,245,35,15" ShowValueBox="true" isIOBox="true" Value="C">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="CwalOBhVxuXPZE48aiVyBd" Comment="Found" Bounds="688,315,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="OiBaYlqlu4pNyejT0dugmS" Comment="Total Size" Bounds="681,410,51,15" ShowValueBox="true" isIOBox="true" />
+          <Overlay Id="EaHgTCaXcrCL1r8oQFODHr" Name="Info about a specific drive" Bounds="548,186,345,308" />
+        </Canvas>
+        <Patch Id="HHbcRvsp6raNc5NW1l06Hf" Name="Create" />
+        <Patch Id="DCNCNC2Q3CIMh92hBPL5Qq" Name="Update" />
+        <ProcessDefinition Id="A94JbDbdilpMLeQrnHhDXp">
+          <Fragment Id="Gsb1u5zlhggLVce4wCKeuv" Patch="HHbcRvsp6raNc5NW1l06Hf" Enabled="true" />
+          <Fragment Id="Tn586ffrFc1LfaEU9KpLwg" Patch="DCNCNC2Q3CIMh92hBPL5Qq" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="VsgwlCtK1UUOVbGh6gQP7Z" Ids="EjeeHXcinVHPZN10y8sRhK,DkNjdP7nUK1NqwlrH1PAYh" />
+        <Link Id="KZEOWAle3rlQJRHd1le4pi" Ids="UHSVBdZst20ML1ztKFwrEa,CKnx551hHRkNSHAFvHpa68" />
+        <Link Id="JiEg66LRv6SPCK932JU7kF" Ids="KdAdThAyVOAMihWV8JiFUd,SwYe3rHUTTvPOvhcirQXiM" />
+        <Link Id="DMYZiBsaTI8NPYgTHO9Fa8" Ids="JfFsLbiLOgnQPXRPWxswYV,NJJuyIA5XZsO5l4Z3Dd7gK" />
+        <Link Id="GSlFTwncblUQVU1PqcMH4j" Ids="LT3pWsRRe9CNXZwOjnuC29,OhREB9ph6E7LseO6FiOX3I" />
+        <Link Id="FLhNNccDZQWMPzZyhN31XL" Ids="JW5CZDIlh8AL7SWF7wSbB4,JLDmSU6tH5jMbttHFHiY2n" />
+        <Link Id="SeiZHxCx8v3LlBvizunjtd" Ids="M94NMZTrChNOBa8Ui43Vt2,DLG1ejM7bBZLf0B5rP7Urq" />
+        <Link Id="S9tDRbxWReCMH9kerskyKt" Ids="GxwCSc22HSnPNScnhqeoCE,IRjuOGPfJaYNY1laOvjWEW" />
+        <Link Id="G3kMmsq4QZeLFrNgBIqeO2" Ids="UeF66fAfZNbN6eYzPXGUbZ,CwalOBhVxuXPZE48aiVyBd" />
+        <Link Id="Av5Hf87ZAO8OwxjBjSQCef" Ids="NDZgRJJ9I3NNzWH3f6KXKg,OiBaYlqlu4pNyejT0dugmS" />
+        <Link Id="FrKA8j85JGUQEdUomDPTdB" Ids="DkH2hJIweXYPoZObaX6lxT,CAyz3AFIS8hP22mt3GWt5I" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="OrCAx3Ld7dxL65wCDpONVw" Location="VL.IO.DriveInfo" Version="0.0.0" />
+</Document>
