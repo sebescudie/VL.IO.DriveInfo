@@ -798,5 +798,5 @@
     </Node>
   </Patch>
   <PlatformDependency Id="OS5HjFARyvCNN4KtpgFcxI" Location="System.IO.FileSystem.DriveInfo" />
-  <PlatformDependency Id="B7cRsjbR8IdOJi20qt4MtV" Location="./lib/net8.0/VL.IO.DriveInfoUtils.dll" IsForward="true" />
+  <PlatformDependency Id="B7cRsjbR8IdOJi20qt4MtV" Location="./lib/net8.0/VL.IO.DriveInfoUtils.dll" />
 </Document>
