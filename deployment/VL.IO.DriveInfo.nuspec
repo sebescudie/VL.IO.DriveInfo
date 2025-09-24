@@ -17,6 +17,7 @@
   </metadata>
   <files>
     <file src="..\*.vl" target="" exclude="" />
+    <file src="..\lib\net8.0\VL.IO.DriveInfoUtils.dll" target="lib\net8.0" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
     <file src="..\README.md" target="docs\" />
   </files>
