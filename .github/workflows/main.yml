@@ -1,0 +1,29 @@
+name: push_nuget
+
+# on push on main
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v5
+
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup Nuget.exe
+      uses: nuget/setup-nuget@v2.0.0
+
+    - name: Publish VL Nuget
+      uses: vvvv/PublishVLNuget@1.0.43
+      with:
+        csproj: csharp\VL.IO.DriveInfoUtils\VL.IO.DriveInfoUtils.csproj
+        nuspec: deployment\VL.IO.DriveInfo.nuspec
+        nuget-key: ${{ secrets.NUGET_KEY }}
